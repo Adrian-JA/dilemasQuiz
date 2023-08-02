@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dilema Quiz</title>
+
+        <link rel="stylesheet" href="./css/style.css" />
+
+        <script defer src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+        <script type="module" src="js/app/index.js"></script>
+        <script type="module" src="js/app/questions.js"></script>
+        <script type="module" src="js/app/socket.js"></script>
+        <script type="module" src="js/app/quiz.js"></script>
+
+        <script type="module" src="js/router/router.js"></script>
+    </head>
+    <body>
+        <main class="main">
+            <h1 class="main__title">Quiz sobre dilemas.</h1>
+
+            <div class="main__blob">
+                <svg class="blob-svg blob-svg--rotate" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        class="blob-svg-2"
+                        fill="#FF0066"
+                        d="M53.6,-55.1C65.9,-41.3,69.9,-20.6,66.8,-3.1C63.7,14.5,53.5,28.9,41.2,43.8C28.9,58.7,14.5,74,-0.3,74.3C-15,74.6,-30,59.8,-41.9,44.9C-53.8,30,-62.6,15,-63.5,-0.8C-64.3,-16.7,-57.1,-33.3,-45.2,-47.2C-33.3,-61.1,-16.7,-72.2,2,-74.2C20.6,-76.2,41.3,-69,53.6,-55.1Z"
+                        transform="translate(100 100)"
+                    />
+                </svg>
+                <svg class="blob-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        class="blob-svg-1"
+                        fill="#FF0066"
+                        d="M46.5,-52.6C60.1,-44,70.9,-29.2,72,-14C73.1,1.2,64.5,16.7,56,33.3C47.6,49.8,39.2,67.4,25.8,73.4C12.3,79.4,-6.3,73.8,-18.5,63.7C-30.7,53.7,-36.6,39.1,-48.3,25C-59.9,10.8,-77.3,-2.9,-76.4,-14.4C-75.4,-25.8,-56.2,-34.9,-40.4,-43.1C-24.6,-51.3,-12.3,-58.5,2.1,-61C16.5,-63.5,32.9,-61.2,46.5,-52.6Z"
+                        transform="translate(100 100)"
+                    />
+                </svg>
+                <img class="main__img" src="./img/undraw_quiz_re_aol4.svg" />
+            </div>
+
+            <button class="main__button" id="btn-start-quiz">Iniciar quiz</button>
+        </main>
+
+        <dialog id="modal" class="modal">
+            <h2 class="modal__title">Ingrese su nombre</h2>
+            <input type="text" class="modal__input" />
+            <button class="modal__button" id="closeModal">Confirmar</button>
+        </dialog>
+    </body>
+</html>
